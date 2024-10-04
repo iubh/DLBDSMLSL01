@@ -23,7 +23,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,
     test_size=0.3, random_state=42)
 
 # %% specify and train the model
-clf = svm.SVC(kernel='linear')
+clf = svm.SVC(kernel='rbf')
 clf.fit(X_train, y_train.values.ravel())
 
 # %% use the model to predict values
@@ -33,5 +33,5 @@ y_pred = clf.predict(X_test)
 print(confusion_matrix(y_test, y_pred))
 
 # %% print accuracy
-accuracy_score(y_test, y_pred)
-# console output: 0.9649122807017544
+print(accuracy_score(y_test, y_pred))
+# console output: 0.935672514619883

@@ -15,7 +15,7 @@ iris = datasets.load_iris()
 
 # %% prepare the data
 X = iris["data"][:, 3:] # petal width
-y = (iris["target"] == 2).astype(np.int) # 1 if Iris virginica, else 0
+y = (iris["target"] == 2).astype(int) # 1 if Iris virginica, else 0
 
 # %% define and fit the model
 log_reg = LogisticRegression()

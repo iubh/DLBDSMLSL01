@@ -34,15 +34,25 @@ clf.fit(X_train, y_train)
 y_pred = clf.predict(X_test)
 
 # %% print the confusion matrix
-print('Confusion Matrix:')
 print(confusion_matrix(y_test, y_pred))
+# console output:
+# [[10  1]
+#  [ 0  5]]
 
 # %% print accuracy
-accuracy_score(y_test, y_pred)
+print(accuracy_score(y_test, y_pred))
 # console output: 0.9375
 
 # %% extract feature importances
 feature_scores = pd.Series(clf.feature_importances_,
     index=X_train.columns).sort_values(ascending=False)
-print('Feature Scores:')
 print(feature_scores)
+
+# console output:
+# Wind_No            0.196809
+# Outlook_Rainy      0.187876
+# Outlook_Sunny      0.187626
+# Wind_Yes           0.185413
+# Humidity_Normal    0.129333
+# Humidity_High      0.112943
+# dtype: float64

@@ -26,3 +26,4 @@ res = mod.fit()
 
 # %% print model summary
 print(res.summary())
+# %%

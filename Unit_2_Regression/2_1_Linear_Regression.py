@@ -20,7 +20,7 @@ regressor.fit(X_train,y_train)
 
 # %% plot the data and the model
 plt.scatter(X_train,y_train,color='red')
-plt.plot(X_train,regressor.predict(X_train),)
+plt.plot(X_train,regressor.predict(X_train))
 plt.title('Salary vs Experience(Train set)')
 plt.xlabel('Experience in years')
 plt.ylabel('Salary')

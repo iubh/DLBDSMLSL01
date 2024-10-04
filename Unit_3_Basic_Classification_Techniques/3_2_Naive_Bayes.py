@@ -10,7 +10,7 @@ from sklearn.naive_bayes import GaussianNB
 
 # %% load the data
 exam_data = pd.read_csv('bayes_data.csv', sep=';')
-print(exam_data.head(10))
+print(exam_data)
 
 # %% prepare the data
 X = exam_data.drop(columns=['Passed'])

@@ -11,6 +11,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import accuracy_score
+from sklearn.metrics import recall_score
+from sklearn.metrics import precision_score
 
 # %% load the data
 dataset = load_breast_cancer()
@@ -33,7 +35,18 @@ y_pred = knn.predict(X_test)
 
 # %% print the confusion matrix
 print(confusion_matrix(y_test, y_pred))
+# consoel output:
+# [[45  8]
+#  [14 76]]
 
 # %% print accuracy
-accuracy_score(y_test, y_pred)
-# console output: 0.8671328671328671
+print(accuracy_score(y_test, y_pred))
+# console output: 0.8461538461538461
+
+# %% print recall
+print(recall_score(y_test, y_pred))
+# console output: 0.8444444444444444
+
+# %% print precision
+print(precision_score(y_test, y_pred))
+# console output: 0.9047619047619048
